@@ -55,12 +55,12 @@ public class State implements Comparable<State>
         this.statePopulation = sp;
     }
     public String toString() {
-        String ans = "State Name: " + stateName + ", State's Capital: " + stateCapital + ", State Flower: " +
-                stateFlower + ", State Bird: " + stateBird + ", State Population: " + statePopulation + "\n";
+        String ans = "State Name: " + stateName + "\n" + "State's Capital: " + stateCapital + "\n" + "State Flower: " +
+                stateFlower + "\n" + "State Bird: " + stateBird + "\n" + "State Population: " + statePopulation + "\n";
         return ans;
     }
     public boolean equals(Object s) {
-        return stateName.equals(((State)s).getStateName());
+        return this.compareTo((State)s) == 0;
     }
     public int compareTo(State s){
         return stateName.compareToIgnoreCase(s.getStateName());
